@@ -19,6 +19,16 @@ btnAdicionar.addEventListener("click", () => {
     novaTarefa.innerText = InputTarefa;
     novaTarefa.className = "list-group-item";
     
+    let checkbox = document.createElement("input")
+    checkbox.type = "checkbox"
+    
+    checkbox.addEventListener("change", () => {
+        if (checkbox.checked) {
+            novaTarefa.className = "list-group-item text-decoration-line-through"
+        } else {
+            novaTarefa.className = "list-group-item"
+        }
+    })
     
     let btnRemover = document.createElement('button')
     btnRemover.innerText = "Remover Tarefa";
@@ -30,7 +40,8 @@ btnAdicionar.addEventListener("click", () => {
         mensagem.innerText = "Tarefa excluída";
         mensagem.className = "p-3 text-center text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-3";
     })
-    
+
     listaTarefas.appendChild(novaTarefa);
     novaTarefa.appendChild(btnRemover);
+    novaTarefa.appendChild(checkbox);
 })
