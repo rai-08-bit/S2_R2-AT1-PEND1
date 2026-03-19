@@ -32,7 +32,7 @@ btnAdicionar.addEventListener("click", () => {
     
     let btnRemover = document.createElement('button')
     btnRemover.innerText = "Remover Tarefa";
-    btnRemover.className = "btn text-center btn-danger border rounded-3";
+    btnRemover.className = "justify-content-center btn btn-outline-danger border rounded-3";
     
     btnRemover.addEventListener("click", () => {
         let apagarTarefa = btnRemover.parentElement;
